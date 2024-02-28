@@ -1,0 +1,6 @@
+# DevEnv Deployment Automation
+
+In this Project I have created an Automated System for deployment of application in Docker Container. The GitHub Repo for this project will have two branches, one for developer ie, <b>devenv</b> and  another for master<b>master</b>. The developer will commit to devenv branch and master will commit to master branch. As soon as the developer will commit, it will check for the website/application and if it is working properly then it will merge it with the production/master branch and will deploy it.
+
+# Working Architecture and Use-Cases
+The working mechanism of this project is something like this. When our developer will push the code to github, it will be uplaoded to devenv branch as it is for developer branch. As soon as he will push the code, code from Jenkins will get triggered. If it is pushed in devenv branch then Docker Container for developer/testing environment will be launched and if it is pushed to master branch which is our production branch then Docker container for production environment will be launched. In this Project I made the testing part manually for devenv. If the testing of the developer environment is successfull and the new code doesn't give any error then, a Job is created which will automatically merge the devenv branch to production branch and deploy the application.
